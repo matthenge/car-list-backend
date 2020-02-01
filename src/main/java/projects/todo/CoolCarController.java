@@ -15,7 +15,7 @@ class CoolCarController {
     }
 
     @GetMapping("/cool-cars")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://car-staging.herokuapp.com")
     public Collection<Car> coolCars() {
         return repository.findAll().stream().filter(this::isCool).collect(Collectors.toList());
     }
